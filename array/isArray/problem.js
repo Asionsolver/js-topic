@@ -13,3 +13,18 @@ const processedScores = Array.from(scores, (scoreElement, index) => {
 });
 
 console.log(processedScores);
+
+// ! Take an array-like object (e.g., from function arguments or a custom one) and create an array where each element is an object containing the original value and its index.
+
+function processMyArguments() {
+  const argumentsDetails = Array.from(arguments, (argumentsElement, index) => {
+    return {
+      Argument_Index: index,
+      Argument_value: argumentsElement,
+      Argument_Type: typeof argumentsElement,
+    };
+  });
+  console.log(argumentsDetails);
+}
+
+processMyArguments("asis", 3, true, [], {});
