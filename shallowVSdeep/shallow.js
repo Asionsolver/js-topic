@@ -30,12 +30,12 @@ const shallowCopy = { ...original };
 shallowCopy.name = "Paul";
 
 // 3. If a property/element is a primitive type, its value is copied.
-console.log(original.name);
-console.log(shallowCopy.name);
+// console.log(original.name);
+// console.log(shallowCopy.name);
 
 // Modify a nested property (skills array)
 shallowCopy.skills.push("UI/UX");
 
 // 4. If a property/element is a reference type (another object or array), the reference to that nested object/array is copied, not the nested object/array itself.
-// console.log("Original:", original);
-// console.log("Shallow Copy:", shallowCopy);
+console.log("Original:", original);
+console.log("Shallow Copy:", shallowCopy);
