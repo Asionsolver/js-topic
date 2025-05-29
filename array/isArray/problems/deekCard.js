@@ -6,7 +6,7 @@ input:
   const suits = ["Hearts", "Spades"];
   const ranks = ["A", "K", "Q", "J"];
 
-
+Desired Output:
 [
   "A of Hearts", "K of Hearts", "Q of Hearts", "J of Hearts",
   "A of Spades", "K of Spades", "Q of Spades", "J of Spades"
@@ -22,4 +22,31 @@ function createSimpleDeck() {
   }).flat();
 }
 
-console.log("Problem 3 Output:", createSimpleDeck());
+// console.log("Problem 3 Output:", createSimpleDeck());
+
+/**
+@Goal (using {length} and modular arithmetic for a flat structure directly if preferred)
+input:
+  const suits = ["Hearts", "Spades"];
+  const ranks = ["A", "K", "Q", "J"];
+Desired Output:
+
+*/
+
+console.log(8 % 4);
+
+function createSimpleDeckLength() {
+  const suits = ["Hearts", "Spades"];
+  const ranks = ["A", "K", "Q", "J"];
+
+  const totalLength = suits.length * ranks.length;
+
+  return Array.from({ length: totalLength }, (_, index) => {
+    const suitsIndex = Math.floor(index / ranks.length);
+    const ranksIndex = index % ranks.length;
+
+    return `${ranks[ranksIndex]} of ${suits[suitsIndex]}`;
+  });
+}
+
+console.log(createSimpleDeckLength());
