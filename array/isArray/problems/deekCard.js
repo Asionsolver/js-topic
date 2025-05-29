@@ -33,8 +33,6 @@ Desired Output:
 
 */
 
-console.log(8 % 4);
-
 function createSimpleDeckLength() {
   const suits = ["Hearts", "Spades"];
   const ranks = ["A", "K", "Q", "J"];
