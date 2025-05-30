@@ -61,4 +61,9 @@ const studentsWhoseFriendsAreAlsoPresent = studentList.filter(
   }
 );
 
-console.log(studentsWhoseFriendsAreAlsoPresent);
+console.log("\nAll students in the class:", studentList);
+console.log("-------------------------------------------");
+console.log(
+  "Students whose friends are also in the class:",
+  studentsWhoseFriendsAreAlsoPresent
+);
